@@ -29,3 +29,7 @@ val rpsMoves = listOf(
         drawable = R.drawable.scissors
     )
 )
+
+val rock = rpsMoves[0].moveName
+val paper = rpsMoves[1].moveName
+val scissors = rpsMoves[2].moveName

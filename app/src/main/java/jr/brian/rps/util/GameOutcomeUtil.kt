@@ -2,7 +2,9 @@ package jr.brian.rps.util
 
 import androidx.compose.ui.graphics.Color
 import jr.brian.rps.data.RPSMessages
-import jr.brian.rps.data.rpsMoves
+import jr.brian.rps.data.paper
+import jr.brian.rps.data.rock
+import jr.brian.rps.data.scissors
 
 fun getOutcomeTextColor(outcome: String): Color {
     return when (outcome) {
@@ -13,9 +15,6 @@ fun getOutcomeTextColor(outcome: String): Color {
 }
 
 fun generateOutcome(userMove: String, cpuMove: String): String {
-    val rock = rpsMoves[0].moveName
-    val paper = rpsMoves[1].moveName
-    val scissors = rpsMoves[2].moveName
     return when {
         userMove == cpuMove -> RPSMessages.TIE_MESSAGE
         userMove == rock && cpuMove == scissors -> RPSMessages.USER_WIN_MESSAGE
